@@ -12,8 +12,8 @@ float seaLevel;
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "189"
-#define WIFI_PASSWORD "hello3214"
+#define WIFI_SSID "PUSHPWILLA 1"
+#define WIFI_PASSWORD "gj01rj0915"
 
 // Insert Firebase project API Key
 #define API_KEY "AIzaSyAV9Is-wg2rImdIh5lpRoBiDObqUbTV7fs"
@@ -153,11 +153,12 @@ void makeIFTTTRequest() {
   
   Serial.println("\nclosing connection");
   client.stop(); 
+  delay(60*1000);
 }
 
 void setup(){
   Serial.begin(9600);
-
+  makeIFTTTRequest();
   initBME();
   initWiFi();
   configTime(0, 0, ntpServer);
@@ -201,6 +202,7 @@ void setup(){
 
 void loop(){
   bme.startConvert();
+  makeIFTTTRequest();
   delay(1000);
   bme.update();
   // Send new readings to database
