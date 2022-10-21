@@ -12,8 +12,8 @@ float seaLevel;
 #include "addons/RTDBHelper.h"
 
 // Insert your network credentials
-#define WIFI_SSID "PUSHPWILLA 1"
-#define WIFI_PASSWORD "gj01rj0915"
+#define WIFI_SSID "ssid"
+#define WIFI_PASSWORD "password"
 
 // Insert Firebase project API Key
 #define API_KEY "AIzaSyAV9Is-wg2rImdIh5lpRoBiDObqUbTV7fs"
